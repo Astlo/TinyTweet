@@ -1,0 +1,504 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://tinybugbug.appspot.com/_ah/api",
+  "name" : "userentityendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://tinybugbug.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "mycompany.com",
+  "ownerName" : "mycompany.com",
+  "packagePath" : "services",
+  "methods" : {
+    "userentityendpoint.suivreUserEntity" : {
+      "path" : "suivreUserEntity/{idAbonnes}/{idAbonnements}",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinyBug.UserEntityEndpoint.suivreUserEntity",
+      "request" : {
+        "parameters" : {
+          "idAbonnes" : {
+            "type" : "int64",
+            "required" : true
+          },
+          "idAbonnements" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "userentityendpoint.insertUserEntity" : {
+      "path" : "userentity",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinyBug.UserEntityEndpoint.insertUserEntity",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "userentityendpoint.listMessageEntity" : {
+      "path" : "messageentity",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinyBug.UserEntityEndpoint.listMessageEntity",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "userentityendpoint.listMessageIndexEntity" : {
+      "path" : "messageindexentity",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinyBug.UserEntityEndpoint.listMessageIndexEntity",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "userentityendpoint.removeUserEntity" : {
+      "path" : "userentity/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinyBug.UserEntityEndpoint.removeUserEntity",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "userentityendpoint.listUserEntity" : {
+      "path" : "userentity",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinyBug.UserEntityEndpoint.listUserEntity",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "userentityendpoint.updateUserEntity" : {
+      "path" : "userentity",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinyBug.UserEntityEndpoint.updateUserEntity",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "userentityendpoint.getUserEntity" : {
+      "path" : "userentity/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinyBug.UserEntityEndpoint.getUserEntity",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "userentityendpoint.tweeter" : {
+      "path" : "tweeter/{message}/{iduser}",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinyBug.UserEntityEndpoint.tweeter",
+      "request" : {
+        "parameters" : {
+          "message" : {
+            "type" : "string",
+            "required" : true
+          },
+          "iduser" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "userentityendpoint.insertMessageEntity" : {
+      "path" : "messageentity",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinyBug.UserEntityEndpoint.insertMessageEntity",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "userentityendpoint.timelineUserEntity" : {
+      "path" : "timelineUserEntity/{iduser}",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinyBug.UserEntityEndpoint.timelineUserEntity",
+      "request" : {
+        "parameters" : {
+          "iduser" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "userentityendpoint.getMessageEntity" : {
+      "path" : "messageentity/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinyBug.UserEntityEndpoint.getMessageEntity",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "UserEntity" : {
+        "id" : "UserEntity",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "pseudo" : {
+            "type" : "string"
+          },
+          "abonnes" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "format" : "int64"
+            }
+          }
+        }
+      },
+      "CollectionResponse_MessageEntity" : {
+        "id" : "CollectionResponse_MessageEntity",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "MessageEntity"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      },
+      "MessageEntity" : {
+        "id" : "MessageEntity",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
+          "sender" : {
+            "$ref" : "UserEntity"
+          },
+          "message" : {
+            "type" : "string"
+          },
+          "date" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "Key" : {
+        "id" : "Key",
+        "type" : "object",
+        "properties" : {
+          "kind" : {
+            "type" : "string"
+          },
+          "appId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "parent" : {
+            "$ref" : "Key"
+          },
+          "namespace" : {
+            "type" : "string"
+          },
+          "complete" : {
+            "type" : "boolean"
+          }
+        }
+      },
+      "CollectionResponse_MessageIndexEntity" : {
+        "id" : "CollectionResponse_MessageIndexEntity",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "MessageIndexEntity"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      },
+      "MessageIndexEntity" : {
+        "id" : "MessageIndexEntity",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "receivers" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "format" : "int64"
+            }
+          },
+          "tweet" : {
+            "$ref" : "MessageEntity"
+          }
+        }
+      },
+      "CollectionResponse_UserEntity" : {
+        "id" : "CollectionResponse_UserEntity",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "UserEntity"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      },
+      "MessageEntityCollection" : {
+        "id" : "MessageEntityCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "MessageEntity"
+            }
+          }
+        }
+      }
+    },
+    "methods" : {
+      "tinyBug.UserEntityEndpoint.suivreUserEntity" : {
+        "response" : {
+          "$ref" : "UserEntity"
+        }
+      },
+      "tinyBug.UserEntityEndpoint.insertUserEntity" : {
+        "request" : {
+          "$ref" : "UserEntity"
+        },
+        "response" : {
+          "$ref" : "UserEntity"
+        }
+      },
+      "tinyBug.UserEntityEndpoint.listMessageEntity" : {
+        "response" : {
+          "$ref" : "CollectionResponse_MessageEntity"
+        }
+      },
+      "tinyBug.UserEntityEndpoint.listMessageIndexEntity" : {
+        "response" : {
+          "$ref" : "CollectionResponse_MessageIndexEntity"
+        }
+      },
+      "tinyBug.UserEntityEndpoint.removeUserEntity" : {
+      },
+      "tinyBug.UserEntityEndpoint.listUserEntity" : {
+        "response" : {
+          "$ref" : "CollectionResponse_UserEntity"
+        }
+      },
+      "tinyBug.UserEntityEndpoint.updateUserEntity" : {
+        "request" : {
+          "$ref" : "UserEntity"
+        },
+        "response" : {
+          "$ref" : "UserEntity"
+        }
+      },
+      "tinyBug.UserEntityEndpoint.getUserEntity" : {
+        "response" : {
+          "$ref" : "UserEntity"
+        }
+      },
+      "tinyBug.UserEntityEndpoint.tweeter" : {
+        "response" : {
+          "$ref" : "MessageEntity"
+        }
+      },
+      "tinyBug.UserEntityEndpoint.insertMessageEntity" : {
+        "request" : {
+          "$ref" : "MessageEntity"
+        },
+        "response" : {
+          "$ref" : "MessageEntity"
+        }
+      },
+      "tinyBug.UserEntityEndpoint.timelineUserEntity" : {
+        "response" : {
+          "$ref" : "MessageEntityCollection"
+        }
+      },
+      "tinyBug.UserEntityEndpoint.getMessageEntity" : {
+        "response" : {
+          "$ref" : "MessageEntity"
+        }
+      }
+    }
+  }
+}
